@@ -33,30 +33,30 @@ INSTRUCTIONS PostgreSQL:
 You just need to put the script: 'db-pgstat.pl' on the databases servers in a executable
 search path and add user paramenters in zabbix_agentd.conf:
 
-UserParameter=postgres.accessexclusivelock[*],db-pgstat.pl      --user postgres --database $1 --accessexclusivelock
-UserParameter=postgres.accesssharelock[*],db-pgstat.pl          --user postgres --database $1 --accesssharelock
-UserParameter=postgres.activeconn[*],db-pgstat.pl               --user postgres --database $1 --activeconn
-UserParameter=postgres.buffers_alloc[*],db-pgstat.pl            --user postgres --database $1 --buffers_alloc
-UserParameter=postgres.buffers_backend[*],db-pgstat.pl          --user postgres --database $1 --buffers_backend
-UserParameter=postgres.buffers_checkpoint[*],db-pgstat.pl       --user postgres --database $1 --buffers_checkpoint
-UserParameter=postgres.buffers_clean[*],db-pgstat.pl            --user postgres --database $1 --buffers_clean
-UserParameter=postgres.checkpoints_req[*],db-pgstat.pl          --user postgres --database $1 --checkpoints_req
-UserParameter=postgres.checkpoints_timed[*],db-pgstat.pl        --user postgres --database $1 --checkpoints_timed
-UserParameter=postgres.exclusivelock[*],db-pgstat.pl            --user postgres --database $1 --exclusivelock
-UserParameter=postgres.maxwritten_clean[*],db-pgstat.pl         --user postgres --database $1 --maxwritten_clean
-UserParameter=postgres.rowexclusivelock[*],db-pgstat.pl         --user postgres --database $1 --rowexclusivelock
-UserParameter=postgres.rowsharelock[*],db-pgstat.pl             --user postgres --database $1 --rowsharelock
-UserParameter=postgres.sharerowexclusivelock[*],db-pgstat.pl    --user postgres --database $1 --sharerowexclusivelock
-UserParameter=postgres.shareupdateexclusivelock[*],db-pgstat.pl --user postgres --database $1 --shareupdateexclusivelock
-UserParameter=postgres.size[*],db-pgstat.pl                     --user postgres --database $1 --size
-UserParameter=postgres.threads[*],db-pgstat.pl                  --user postgres --database $1 --threads
-UserParameter=postgres.tupdeleted[*],db-pgstat.pl               --user postgres --database $1 --tupdeleted
-UserParameter=postgres.tupfetched[*],db-pgstat.pl               --user postgres --database $1 --tupfetched
-UserParameter=postgres.tupinserted[*],db-pgstat.pl              --user postgres --database $1 --tupinserted
-UserParameter=postgres.tupreturned[*],db-pgstat.pl              --user postgres --database $1 --tupreturned
-UserParameter=postgres.tupupdated[*],db-pgstat.pl               --user postgres --database $1 --tupupdated
-UserParameter=postgres.xactcommit[*],db-pgstat.pl               --user postgres --database $1 --xactcommit
-UserParameter=postgres.xactrollback[*],db-pgstat.pl             --user postgres --database $1 --xactrollback
+UserParameter=postgres.accessexclusivelock,/opt/zabbix/plugins/db-pgstat.pl      --user postgres --database template1 --accessexclusivelock
+UserParameter=postgres.accesssharelock,/opt/zabbix/plugins/db-pgstat.pl          --user postgres --database template1 --accesssharelock
+UserParameter=postgres.activeconn,/opt/zabbix/plugins/db-pgstat.pl               --user postgres --database template1 --activeconn
+UserParameter=postgres.buffers_alloc,/opt/zabbix/plugins/db-pgstat.pl            --user postgres --database template1 --buffers_alloc
+UserParameter=postgres.buffers_backend,/opt/zabbix/plugins/db-pgstat.pl          --user postgres --database template1 --buffers_backend
+UserParameter=postgres.buffers_checkpoint,/opt/zabbix/plugins/db-pgstat.pl       --user postgres --database template1 --buffers_checkpoint
+UserParameter=postgres.buffers_clean,/opt/zabbix/plugins/db-pgstat.pl            --user postgres --database template1 --buffers_clean
+UserParameter=postgres.checkpoints_req,/opt/zabbix/plugins/db-pgstat.pl          --user postgres --database template1 --checkpoints_req
+UserParameter=postgres.checkpoints_timed,/opt/zabbix/plugins/db-pgstat.pl        --user postgres --database template1 --checkpoints_timed
+UserParameter=postgres.exclusivelock,/opt/zabbix/plugins/db-pgstat.pl            --user postgres --database template1 --exclusivelock
+UserParameter=postgres.maxwritten_clean,/opt/zabbix/plugins/db-pgstat.pl         --user postgres --database template1 --maxwritten_clean
+UserParameter=postgres.rowexclusivelock,/opt/zabbix/plugins/db-pgstat.pl         --user postgres --database template1 --rowexclusivelock
+UserParameter=postgres.rowsharelock,/opt/zabbix/plugins/db-pgstat.pl             --user postgres --database template1 --rowsharelock
+UserParameter=postgres.sharerowexclusivelock,/opt/zabbix/plugins/db-pgstat.pl    --user postgres --database template1 --sharerowexclusivelock
+UserParameter=postgres.shareupdateexclusivelock,/opt/zabbix/plugins/db-pgstat.pl --user postgres --database template1 --shareupdateexclusivelock
+UserParameter=postgres.size,/opt/zabbix/plugins/db-pgstat.pl                     --user postgres --database template1 --size
+UserParameter=postgres.threads,/opt/zabbix/plugins/db-pgstat.pl                  --user postgres --database template1 --threads
+UserParameter=postgres.tupdeleted,/opt/zabbix/plugins/db-pgstat.pl               --user postgres --database template1 --tupdeleted
+UserParameter=postgres.tupfetched,/opt/zabbix/plugins/db-pgstat.pl               --user postgres --database template1 --tupfetched
+UserParameter=postgres.tupinserted,/opt/zabbix/plugins/db-pgstat.pl              --user postgres --database template1 --tupinserted
+UserParameter=postgres.tupreturned,/opt/zabbix/plugins/db-pgstat.pl              --user postgres --database template1 --tupreturned
+UserParameter=postgres.tupupdated,/opt/zabbix/plugins/db-pgstat.pl               --user postgres --database template1 --tupupdated
+UserParameter=postgres.xactcommit,/opt/zabbix/plugins/db-pgstat.pl               --user postgres --database template1 --xactcommit
+UserParameter=postgres.xactrollback,/opt/zabbix/plugins/db-pgstat.pl             --user postgres --database template1 --xactrollback
 
 You can use --pass option for password database support (not recommend).
 Zabbix discussions: http://www.zabbix.com/forum/showthread.php?p=99640#post99640
